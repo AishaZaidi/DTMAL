@@ -33,8 +33,23 @@ missingSubjects ← missingSubjects + 1
         IF subjectTally[subject] > topCount THEN
             topCount ← subjectTally[subject]
             topSubject ← subject
+# Step 8: Show the results
+    PRINT "===== Subject Analysis Report ====="
+    PRINT "Subjects and Their Counts:"
+
+    FOR each subject IN subjectTally DO
+        PRINT subject, "→", subjectTally[subject]
+    END FOR
+
+    PRINT "-----------------------------------"
+    PRINT "Most Frequent Subject:", topSubject
+    PRINT "Times Appeared:", topCount
+    PRINT "Total Records Checked:", totalChecked
+    PRINT "Records Missing Subject:", missingSubjects
+    PRINT "Done analyzing!"
 END IF
 
 END FOR
+
 
 
