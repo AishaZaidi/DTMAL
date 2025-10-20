@@ -34,5 +34,7 @@ missingSubjects ← missingSubjects + 1
             topCount ← subjectTally[subject]
             topSubject ← subject
 END IF
+
 END FOR
+
 
