@@ -10,21 +10,19 @@ a dataset, and use pseudocode to design an algorithm to process that dataset in 
 
 This dataset is part of our Assignment 2: Algorithm Design (Project Work) for the Datalogical thinking course. It is a curated metadata collection derived from open digital book https://www.kaggle.com/datasets/lokeshparab/gutenberg-books-and-metadata-2025.
 Dataset Overview
-Column Name
-Description
-ID
+Column Name (ID)
 Unique identifier for each item in the dataset.
-Type
-The kind of record (Text)
-Issued
+(Type)
+The kind of record i.e Text
+(Issued)
 The year or date when the item was first published.
-Title
+(Title)
 The title or name of the work.
-Language
+(Language)
 The primary language of the work (e.g., English, French, German).
-Authors
+(Authors)
 The creator(s) or main contributors of the work.
-Subjects
+(Subjects)
 Thematic keywords or categories describing the content (e.g., Fiction, Science, History).
 Data Preparation
 Before inclusion in the repository:
