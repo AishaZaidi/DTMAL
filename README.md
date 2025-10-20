@@ -7,6 +7,7 @@ a dataset, and use pseudocode to design an algorithm to process that dataset in 
 
 ## About the Course
 *Datalogical Thinking* is a course taught at the [University of Borås](https://www.hb.se) (Sweden), as part of the [MA in Information Science: Digital Environments](https://www.hb.se/en/international-student/program/programmes/masters-programme-in-information-science-digital-environments/). The course, in its current form, was designed by Wout Dillen, and taught for the first time in the autumn of 2023, with the help of his colleagues David Gunnarson Lorentzen, Kayvan Yousefi Mojir, Elisa Tattersall Wallin, and Anton Carlander Borgström.
+
 This dataset is part of our Assignment 2: Algorithm Design (Project Work) for the Datalogical thinking course. It is a curated metadata collection derived from open digital book https://www.kaggle.com/datasets/lokeshparab/gutenberg-books-and-metadata-2025.
 Dataset Overview
 Column Name
