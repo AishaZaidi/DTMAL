@@ -25,5 +25,14 @@ END IF
 ELSE
 # Step 6: Note missing subject
 missingSubjects ← missingSubjects + 1
+# Step 7: Find the most common one
+    topSubject ← ""
+    topCount ← 0
+
+    FOR each subject IN subjectTally DO
+        IF subjectTally[subject] > topCount THEN
+            topCount ← subjectTally[subject]
+            topSubject ← subject
 END IF
 END FOR
+
