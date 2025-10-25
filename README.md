@@ -11,13 +11,15 @@ This dataset is part of our Assignment 2: Algorithm Design (Project Work) for th
 ## Step 2: Curation of our Dataset
 Dataset Overview
 Column Name 
-(ID): unique identifier for each item in the dataset.
-(Type)The kind of record  (Text/audio)
-(Issued)The year or date when the item was first published.
-(Title)The title or name of the work.
-(Language)The primary language of the work (e.g., English, French, German).
-(Authors)The creator(s) or main contributors of the work.
-(Subjects)Thematic keywords or categories describing the content (e.g., Fiction, Science, History).
+| Column Name | Description |
+|--------------|-------------|
+| **ID** | Unique identifier for each item in the dataset |
+| **Type** | The kind of record (Text / Audio) |
+| **Issued** | The year or date when the item was first published |
+| **Title** | The title or name of the work |
+| **Language** | The primary language of the work (e.g., English, French, German) |
+| **Authors** | The creator(s) or main contributors of the work |
+| **Subjects** | Thematic keywords or categories describing the content (e.g., Fiction, Science, History) |
 Data Preparation before inclusion in the repository:
 The data was cleaned and formatted into CSV structure.
 Extra symbols, missing rows, and formatting errors were removed.
