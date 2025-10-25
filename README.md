@@ -20,13 +20,17 @@ Column Name
 | **Language** | The primary language of the work (e.g., English, French, German) |
 | **Authors** | The creator(s) or main contributors of the work |
 | **Subjects** | Thematic keywords or categories describing the content (e.g., Fiction, Science, History) |
-Data Preparation before inclusion in the repository:
-The data was cleaned and formatted into CSV structure.
-Extra symbols, missing rows, and formatting errors were removed.
-All records were validated to ensure at least 100 entries, fulfilling assignment requirements.
-Intended Use:
+
+#### Data Preparation Before Inclusion in the Repository
+
+- The dataset was **cleaned and formatted** into a consistent CSV structure.  
+- **Extra symbols, missing rows, and formatting errors** were removed.  
+- All columns were checked to ensure **data consistency** (e.g., matching column headers and no blank identifiers).  
+- Each record was validated to make sure the dataset met the **minimum requirement of 50+ entries**.
+All records were validated to ensure at least **100 entries**, fulfilling assignment requirements.
+**Intended Use:**
 This dataset will be used to design and test an algorithmic model that processes bibliographic metadata.
-License & Usage:
+**License & Usage:**
 This dataset is intended for educational purposes only within the context of the Assignment 2 group project.
 It is used under fair use for analysis, visualization, and algorithmic exploration.
 
