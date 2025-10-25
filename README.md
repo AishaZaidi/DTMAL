@@ -37,7 +37,7 @@ This dataset is intended for educational purposes only within the context of the
 It is used under fair use for analysis, visualization, and algorithmic exploration.
 
 ## Step 3: Design Your Algorithm 
-##### Contributors:(Lilian Omolo,Syeda Aisha Zaidi)
+##### Contributors:(Lilian Omolo,Syeda Aisha Zaidi,Stefan,Muhammad)
 
  **Setup**
 - The dataset is loaded using read_csv("assignment2_dataset1.csv"), which reads all the book records into memory.
