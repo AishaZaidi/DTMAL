@@ -1,5 +1,6 @@
 # Algorithm design
-## Step 1: Conceptualization (Muhammad Al-Waeli,Lilian Omolo,Stefan Ionica,Syeda Aisha Zaidi)
+## Step 1: Conceptualization 
+### contributors:(Muhammad Al-Waeli,Lilian Omolo,Stefan Ionica,Syeda Aisha Zaidi)
 This dataset is part of our Assignment 2: Algorithm Design (Project Work) for the Datalogical thinking course. It is a curated metadata collection derived from open source digital book https://www.kaggle.com/datasets/lokeshparab/gutenberg-books-and-metadata-2025.
 ### Team Members & Roles
 | Name | Role | Contribution |
@@ -9,6 +10,7 @@ This dataset is part of our Assignment 2: Algorithm Design (Project Work) for th
 | **Lilian Omolo** | Data Engineer | Cleaned and validated dataset; supported algorithm design |
 | **Stefan Ionica** | Documentation Lead | Website setup, documentation, and Python code |
 ## Step 2: Curation of our Dataset
+#### contributors:(Muhammad Al-Waeli,Lilian Omolo)
 Dataset Overview
 Column Name 
 | Column Name | Description |
@@ -35,6 +37,7 @@ This dataset is intended for educational purposes only within the context of the
 It is used under fair use for analysis, visualization, and algorithmic exploration.
 
 ## Step 3: Design Your Algorithm (Syeda Aisha Zaidi)
+### contributors:(Lilian Omolo,Syeda Aisha Zaidi)
 
 - Designing the **`CountPopularSubjects`** algorithm to analyze the dataset and identify the most frequent subject.  
 - Writing **human-readable pseudocode** that meets the course requirements for iteration, selection, and variable use.  
@@ -45,7 +48,8 @@ It is used under fair use for analysis, visualization, and algorithmic explorati
 This contribution demonstrates my understanding of algorithmic design, structured data processing, and technical documentation using Markdown.
 
 
-## Step 4: Website
+## Step 4: Website 
+### contributors:(Muhammad Al-Waeli,Lilian Omolo,Stefan Ionica)
 The website was created following the steps below:  
 - **Skeleton** creation.  
 - Insertion of the body **content**  
