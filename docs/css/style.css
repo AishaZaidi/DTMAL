@@ -1,5 +1,3 @@
-/* Feel free to change me and make me your own! */
-
 body {
   background-color: #F5F6F7; 
   font-family: Georgia, serif; 
@@ -51,9 +49,8 @@ img.copyright_logo {
   width: 35vw;
 }
 
-/* Custom styles for the project website */
 
-/* Navigation styling */
+
 .navbar {
   background-color: #5A6C7D !important;
   margin-bottom: 2rem;
@@ -84,19 +81,18 @@ img.copyright_logo {
   border-radius: 8px 8px 0 0;
 }
 
-/* Specific styling for Lilo's photo to show more of the image */
+
 img[src="img/LIlo.jpg"] {
   object-fit: contain;
   object-position: center;
   background-color: #f8f9fa;
 }
 
-/* Timeline and cards */
 .timeline .card {
   border-left: 4px solid #7A8A99;
 }
 
-/* Custom color classes for pleasant, masculine pastels */
+
 .bg-sage {
   background-color: #8FA68E !important;
   color: white !important;
@@ -133,7 +129,6 @@ img[src="img/LIlo.jpg"] {
   color: #5A6C7D !important;
 }
 
-/* Responsive adjustments */
 @media (max-width: 768px) {
   article {
     margin-left: 5vw;
@@ -157,18 +152,18 @@ img[src="img/LIlo.jpg"] {
   }
 }
 
-/* Custom alert styling */
+
 .alert {
   border-radius: 8px;
   margin: 1rem 0;
 }
 
-/* Table styling */
+
 .table-responsive {
   margin: 1rem 0;
 }
 
-/* Card improvements */
+
 .card {
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
