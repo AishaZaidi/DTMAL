@@ -39,17 +39,92 @@ It is used under fair use for analysis, visualization, and algorithmic explorati
 ## Step 3: Design Your Algorithm 
 ##### Contributors:(Lilian Omolo,Syeda Aisha Zaidi)
 
-- Our goal was to designing the algorithm that can analyze the dataset and identify the most frequent subject.
-Identified variables included :
---subjectTally → an empty dictionary that stores subjects as keys and their counts as values.
---totalChecked → keeps track of the total number of records processed.
---missingSubjects → counts how many records have empty or missing subject fields  
-- Writing **human-readable pseudocode** that meets the course requirements for iteration, selection, and variable use.  
-- Providing detailed explanations for each algorithm step in the README.  
-- Checking that the dataset’s `Subjects` column was suitable for analysis.  
-- Editing and organizing the project documentation in GitHub.
+--- Step 1 – Setup
 
-This contribution demonstrates our understanding of algorithmic design, structured data processing, and technical documentation using Markdown.
+The dataset is loaded using read_csv("assignment2_dataset1.csv"), which reads all the book records into memory.
+
+Several variables are initialized:
+
+subjectTally → an empty dictionary that stores subjects as keys and their counts as values.
+
+totalChecked → keeps track of the total number of records processed.
+
+missingSubjects → counts how many records have empty or missing subject fields.
+
+This step prepares all necessary data containers before the main loop starts.
+
+Step 2 – Go Through Each Record
+
+The algorithm uses a FOR loop (FOR each entry IN records DO) to go through each record (or row) in the dataset.
+
+For every record, it increases the totalChecked variable by 1 to count that it has been processed.
+
+This ensures every entry is analyzed exactly once.
+
+Step 3 – Grab the Subject
+
+The algorithm extracts the subject from the current record using:
+subject ← trim(to_lowercase(entry["Subjects"]))
+
+to_lowercase() ensures that “Fiction” and “fiction” are treated as the same value.
+
+trim() removes any unnecessary spaces around the subject name.
+
+This standardization step prevents counting errors caused by inconsistent capitalization or spacing.
+
+Step 4 – Check if Subject Is Usable
+
+Before counting, the algorithm checks if the subject value is not empty (IF subject ≠ "" THEN).
+
+This prevents missing or blank subject fields from being added to the tally.
+
+Only valid subject entries move on to the next step for counting.
+
+Step 5 – Count It
+
+The algorithm checks whether the subject already exists in the dictionary subjectTally:
+
+If it does, its count is increased by 1.
+
+If it does not, a new entry is created with an initial value of 1.
+
+This logic ensures that every subject’s total occurrences are correctly tracked.
+
+Step 6 – Note Missing Subjects
+
+If the subject field was empty or invalid, the algorithm increases the missingSubjects counter by 1.
+
+This allows the final report to include the number of incomplete records.
+
+Step 7 – Find the Most Common One
+
+After counting all subjects, the algorithm determines which subject appears most often.
+
+It initializes:
+
+topSubject → an empty string to hold the most common subject.
+
+topCount → set to 0 as the starting comparison value.
+
+The algorithm then loops through each subject in subjectTally:
+
+If a subject’s count is higher than topCount, it updates topCount and topSubject.
+
+At the end of this loop, topSubject contains the most frequent subject and topCount its frequency.
+
+Step 8 – Show the Results
+
+The algorithm prints a formatted summary report showing:
+
+Each subject and its count.
+
+The most frequent subject.
+
+The total number of records processed.
+
+The number of missing subject entries.
+
+The final message — “Done analyzing!” — marks successful completion of the analysis.
 
 
 ## Step 4: Website 
