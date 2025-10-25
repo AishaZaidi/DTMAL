@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Dataset - Group 9</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+    </head>
+    <body>
+        <header class="mb-4">
+            <h1 class="text-center">Group 9 - Gutenberg Books Subject Analysis</h1>
+        </header>
+        
+        <nav class="navbar navbar-expand-lg mb-4">
+            <div class="container-fluid">
+                <div class="navbar-nav mx-auto">
+                    <a class="nav-link" href="index.html">Home</a>
+                    <a class="nav-link active" href="dataset.html">Dataset</a>
+                    <a class="nav-link" href="algorithm.html">Algorithm</a>
+                    <a class="nav-link" href="people.html">Team</a>
+                </div>
+            </div>
+        </nav>
+        
+        <main class="container">
+            <section>
+                <h2>Our Dataset: Gutenberg Books Metadata</h2>
+                
+                <div class="row mt-4">
+                    <div class="col-lg-8">
+                        <h3>What is in Our Dataset?</h3>
+                        <p>
+                            We are working with metadata from Project Gutenberg books. Basically, it is information about thousands of 
+                            free digital books. For this exercise we used just a subset of 99 book records. We got this from a 
+                            <a href="https://www.kaggle.com/datasets/lokeshparab/gutenberg-books-and-metadata-2025">Kaggle dataset</a>.
+                        </p>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Quick Stats</h5>
+                                <ul class="list-unstyled">
+                                    <li><i class="bi bi-book me-2 text-muted-green"></i><strong>99</strong> book records</li>
+                                    <li><i class="bi bi-table me-2 text-muted-blue"></i><strong>7</strong> data columns</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <h3 class="mt-5">Dataset Structure</h3>
+                <p>Here is what each column in our data contains:</p>
+                
+                <div class="table-responsive">
+                    <table class="table table-hover">
+                        <thead class="table-dark">
+                            <tr>
+                                <th>Field</th>
+                                <th>What It Contains</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><code>ID</code></td>
+                                <td>Unique number for each book</td>
+                            </tr>
+                            <tr>
+                                <td><code>Type</code></td>
+                                <td>Text, dataset, audio, etc.</td>
+                            </tr>
+                            <tr>
+                                <td><code>Issued</code></td>
+                                <td>When the book was published</td>
+                            </tr>
+                            <tr>
+                                <td><code>Title</code></td>
+                                <td>The book's name</td>
+                            </tr>
+                            <tr>
+                                <td><code>Language</code></td>
+                                <td>What language it is written in</td>
+                            </tr>
+                            <tr>
+                                <td><code>Authors</code></td>
+                                <td>Who wrote it</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Subjects</strong></td>
+                                <td><strong>Topic categories (this is what we analyze!)</strong></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <h3 class="mt-5">Cleaning Up the Data</h3>
+                <p><em>Muhammad and Lilian handled this part</em></p>
+                
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="card border-success">
+                            <div class="card-header bg-sage">
+                                <h5 class="mb-0"><i class="bi bi-tools me-2"></i>What We Fixed</h5>
+                            </div>
+                            <div class="card-body">
+                                <ul>
+                                    <li>Removed weird symbols and formatting errors</li>
+                                    <li>Got rid of empty rows</li>
+                                    <li>Made sure column headers matched up</li>
+                                    <li>Checked that every record had an ID</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card border-info">
+                            <div class="card-header bg-dusty-blue">
+                                <h5 class="mb-0"><i class="bi bi-check-circle me-2"></i>Quality Check</h5>
+                            </div>
+                            <div class="card-body">
+                                <ul>
+                                    <li>Started with messy raw data</li>
+                                    <li>Ended up with clean CSV format</li>
+                                    <li>Checked the number of records</li>
+                                    <li>All data properly structured</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <h3 class="mt-5">Why This Dataset?</h3>
+                
+                <div class="alert alert-warning">
+                    <h5><i class="bi bi-lightbulb me-2"></i>Our Reasoning</h5>
+                    <p class="mb-0">
+                        We picked Gutenberg books because they have really detailed subject tags. Perfect for testing our subject-counting algorithm!
+                    </p>
+                </div>
+                
+                <div class="alert alert-success">
+                    <h5><i class="bi bi-balance-scale me-2"></i>Quality vs Quantity</h5>
+                    <p class="mb-0">
+                        We decided it was better to have clean, reliable data than lots of messy data.
+                    </p>
+                </div>
+                
+                <h3 class="mt-4">What are We Using It For</h3>
+                <p>
+                    This dataset allows us to develop and validate an algorithm that identifies popular subjects within book collections. By working with this focused dataset, we can refine our approach before scaling to larger collections. When combined with temporal data, our algorithm could potentially reveal trending subjects and patterns in literature over time.
+                </p>
+                
+                <div class="alert alert-info">
+                    <i class="bi bi-info-circle me-2"></i><strong>Note:</strong> We are using this data under fair use for educational analysis as part of our university assignment.
+                </div>
+            </section>
+        </main>
+        
+        <footer class="mt-5 py-4">
+            <div class="container text-center">
+                <div class="d-flex justify-content-center align-items-center">
+                    <a href="https://creativecommons.org/licenses/by/4.0/legalcode" class="me-2">
+                        <img src="img/cc.svg" alt="Creative Commons" width="20">
+                        <img src="img/by.svg" alt="Attribution 4.0" width="20">
+                    </a>
+                    <small>2025 Group 9 - DTMAL Project</small>
+                </div>
+            </div>
+        </footer>
+        
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>

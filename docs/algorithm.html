@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Algorithm - Group 9</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+    </head>
+    <body>
+        <header class="mb-4">
+            <h1 class="text-center">Group 9 - Gutenberg Books Subject Analysis</h1>
+        </header>
+        
+        <nav class="navbar navbar-expand-lg mb-4">
+            <div class="container-fluid">
+                <div class="navbar-nav mx-auto">
+                    <a class="nav-link" href="index.html">Home</a>
+                    <a class="nav-link" href="dataset.html">Dataset</a>
+                    <a class="nav-link active" href="algorithm.html">Algorithm</a>
+                    <a class="nav-link" href="people.html">Team</a>
+                </div>
+            </div>
+        </nav>
+        
+        <main class="container">
+            <section>
+                <h2>How Our Subject Counting Algorithm Works</h2>
+                <p><em>Team effort: Lilian, Syeda, Stefan, and Muhammad all contributed</em></p>
+                
+                <div class="alert alert-primary">
+                    <i class="bi bi-gear me-2"></i><strong>What does it do?</strong> Our algorithm counts how many times each subject appears in our book dataset, 
+                    then tells us which subjects are most popular.
+                </div>
+                
+                <h3 class="mt-4">The Step-by-Step Process</h3>
+                
+                <div class="row">
+                    <div class="col-lg-8">
+                        <div class="accordion" id="algorithmSteps">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#step1">
+                                        Step 1: Getting Ready
+                                    </button>
+                                </h2>
+                                <div id="step1" class="accordion-collapse collapse show">
+                                    <div class="accordion-body">
+                                        <p>First, we load our CSV file and set up some containers:</p>
+                                        <ul>
+                                            <li><strong>subjectTally:</strong> Like a notebook where we keep count of each subject</li>
+                                            <li><strong>totalChecked:</strong> Counts how many books we have looked at</li>
+                                            <li><strong>missingSubjects:</strong> Tracks books without subject info</li>
+                                        </ul>
+                                        <p>Think of it like setting up your workspace before starting a project.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#step2">
+                                        Step 2: Going Through Each Book
+                                    </button>
+                                </h2>
+                                <div id="step2" class="accordion-collapse collapse">
+                                    <div class="accordion-body">
+                                        <p>We use a simple loop to check every single book record:</p>
+                                        <ul>
+                                            <li>Look at book #1, then book #2, then book #3...</li>
+                                            <li>Keep counting: "That is 1 book checked, that is 2 books checked..."</li>
+                                            <li>Make sure we do not skip any or count any twice</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#step3">
+                                        Step 3: Cleaning Up Subject Names
+                                    </button>
+                                </h2>
+                                <div id="step3" class="accordion-collapse collapse">
+                                    <div class="accordion-body">
+                                        <p>We standardize the subject text so "Fiction" and "fiction" count as the same thing:</p>
+                                        <code>subject = subject.strip().lower()</code>
+                                        <ul>
+                                            <li><code>.lower()</code> makes everything lowercase</li>
+                                            <li><code>.strip()</code> removes extra spaces</li>
+                                            <li>This prevents counting errors from different formatting</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#step4">
+                                        Step 4: Counting the Subjects
+                                    </button>
+                                </h2>
+                                <div id="step4" class="accordion-collapse collapse">
+                                    <div class="accordion-body">
+                                        <p>Here's where the actual counting happens:</p>
+                                        <ul>
+                                            <li><strong>If the subject field is empty:</strong> Add 1 to our "missing subjects" count</li>
+                                            <li><strong>If we haveve seen this subject before:</strong> Add 1 to its count</li>
+                                            <li><strong>If it is a new subject:</strong> Start counting it at 1</li>
+                                        </ul>
+                                        <p>It's like having tally marks for each subject category.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#step5">
+                                        Step 5: Finding the Winner
+                                    </button>
+                                </h2>
+                                <div id="step5" class="accordion-collapse collapse">
+                                    <div class="accordion-body">
+                                        <p>After counting everything, we find the most popular subject:</p>
+                                        <ul>
+                                            <li>Start with topCount = 0</li>
+                                            <li>Go through each subject in our tally</li>
+                                            <li>If a subject has more counts than our current winner, it becomes the new winner</li>
+                                            <li>Keep doing this until we have checked them all</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#step6">
+                                        Step 6: Showing Results
+                                    </button>
+                                </h2>
+                                <div id="step6" class="accordion-collapse collapse">
+                                    <div class="accordion-body">
+                                        <p>Finally, we print out a nice summary:</p>
+                                        <ul>
+                                            <li>List of all subjects with their counts</li>
+                                            <li>Which subject won (appeared most often)</li>
+                                            <li>How many books we analyzed total</li>
+                                            <li>How many had missing subject info</li>
+                                        </ul>
+                                        <p>Plus a "Done analyzing!" message so we know it finished.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-4">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5><i class="bi bi-list-ol me-2"></i>Quick Algorithm Summary</h5>
+                            </div>
+                            <div class="card-body">
+                                <ol>
+                                    <li>Load data & set up counters</li>
+                                    <li>Loop through each book</li>
+                                    <li>Clean up subject text</li>
+                                    <li>Count subjects (or note if missing)</li>
+                                    <li>Find most popular</li>
+                                    <li>Display results</li>
+                                </ol>
+                            </div>
+                        </div>
+                        
+                        <div class="card mt-3">
+                            <div class="card-header">
+                                <h5><i class="bi bi-funnel me-2"></i>Our Smart Filtering</h5>
+                            </div>
+                            <div class="card-body">
+                                <p>We added extra filtering to skip:</p>
+                                <ul class="small">
+                                    <li>Library classification codes</li>
+                                    <li>Very short entries (<= 3 chars)</li>
+                                </ul>
+                                <p class="small">This makes our results much cleaner!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <h3 class="mt-5">Why We Built It This Way</h3>
+                
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="alert" style="background-color: #E8F1E8; border-color: #8FA68E; color: #2d5a27;">
+                            <h5><i class="bi bi-heart me-2"></i>Simple & Effective</h5>
+                            <p class="mb-0">
+                                We chose frequency counting because it is straightforward and gives clear results. 
+                                Everyone can understand "count how many times each subject appears."
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-4">
+                        <div class="alert" style="background-color: #E8ECF0; border-color: #708090; color: #2c3e50;">
+                            <h5><i class="bi bi-shield-check me-2"></i>Handles Messy Data</h5>
+                            <p class="mb-0">
+                                By tracking missing subjects and cleaning the text, our algorithm deals with real-world 
+                                data problems instead of assuming everything is perfect.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-4">
+                        <div class="alert" style="background-color: #EBE8E0; border-color: #A0937D; color: #4a3c2a;">
+                            <h5><i class="bi bi-arrow-up-circle me-2"></i>Room to Grow</h5>
+                            <p class="mb-0">
+                                The design works well with bigger datasets too. Our filtering keeps noise out, 
+                                and the dictionary lookup is super fast.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <h3 class="mt-4">What Our Code Actually Does</h3>
+                <p>
+                    We wrote this in Python because it is good at handling CSV files and text processing. 
+                    The main script is called <code>count_popular_subjects.py</code> - you can check it out on our GitHub
+                    to see exactly how we implemented everything.
+                </p>
+                
+                <div class="card">
+                    <div class="card-body">
+                        <h5><i class="bi bi-terminal me-2"></i>Output Example:</h5>
+                        <pre class="small">Top subjects:
+12x fiction
+ 8x history  
+ 6x science
+ 4x poetry
+ 3x drama
+
+Most popular: fiction (12x)
+Total records: 150
+Unique subjects: 45
+Records Missing Subject: 4
+Done analyzing!</pre>
+                    </div>
+                </div>
+            </section>
+        </main>
+        
+        <footer class="mt-5 py-4">
+            <div class="container text-center">
+                <div class="d-flex justify-content-center align-items-center">
+                    <a href="https://creativecommons.org/licenses/by/4.0/legalcode" class="me-2">
+                        <img src="img/cc.svg" alt="Creative Commons" width="20">
+                        <img src="img/by.svg" alt="Attribution 4.0" width="20">
+                    </a>
+                    <small>2025 Group 9 - DTMAL Project</small>
+                </div>
+            </div>
+        </footer>
+        
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>

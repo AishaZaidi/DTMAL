@@ -6,7 +6,7 @@ BEGIN
 
     # Step 1: Setup
     # Load the data file
-    records <- read_csv("csv-data.csv")   
+    records <- read_csv("data-cleaned.csv")   
     # maintain track of subject counts             
     subjectTally <- empty dictionary  
     # Total records looked at                     
