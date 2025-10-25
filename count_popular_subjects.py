@@ -14,28 +14,45 @@ def filter_subjects(subject):
 
 def main():
     subjects = {}
-    records = 0
+    total_checked = 0
+    missing_subjects = 0
     
     with open("data/data-cleaned.csv", "r") as f:
         reader = csv.DictReader(f)
         for row in reader:
-            records += 1
+            total_checked += 1
             if row["Subjects"]:
                 for subject in row["Subjects"].split("|"):
                     clean = subject.strip().lower()
                     if clean and filter_subjects(clean):
                         subjects[clean] = subjects.get(clean, 0) + 1
+            else:
+                missing_subjects += 1
     
     # Sort by frequency
     sorted_subjects = sorted(subjects.items(), key=lambda x: x[1], reverse=True)
     
-    print("Top subjects:")
-    for subject, count in sorted_subjects[:20]:
-        print(f"{count:2d}x {subject}")
+    # Find the most frequent subject
+    if sorted_subjects:
+        top_subject = sorted_subjects[0][0]
+        top_count = sorted_subjects[0][1]
+    else:
+        top_subject = "None found"
+        top_count = 0
     
-    print(f"\nMost popular: {sorted_subjects[0][0]} ({sorted_subjects[0][1]}x)")
-    print(f"Total records: {records}")
-    print(f"Unique subjects: {len(subjects)}")
+    # Display results in the specified format
+    print("===== Subject Analysis Report =====")
+    print("Subjects and Their Counts:")
+    
+    for subject, count in sorted_subjects:
+        print(f"{subject} -> {count}")
+    
+    print("-----------------------------------")
+    print(f"Most Frequent Subject: {top_subject}")
+    print(f"Times Appeared: {top_count}")
+    print(f"Total Records Checked: {total_checked}")
+    print(f"Records Missing Subject: {missing_subjects}")
+    print("Done analyzing!")
 
 if __name__ == "__main__":
     main()
