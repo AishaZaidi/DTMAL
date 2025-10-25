@@ -46,25 +46,30 @@ subjectTally → an empty dictionary that stores subjects as keys and their coun
 totalChecked → keeps track of the total number of records processed.
 missingSubjects → counts how many records have empty or missing subject fields.
 - This step prepares all necessary data containers before the main loop starts.
+  
 **Passing Through Each Record**
 - The algorithm uses a FOR loop (FOR each entry IN records DO) to go through each record (or row) in the dataset.
 - For every record, it increases the totalChecked variable by 1 to count that it has been processed.
 - This ensures every entry is analyzed exactly once.
+
 **Grab the Subject**
 The algorithm extracts the subject from the current record using:
 subject ← trim(to_lowercase(entry["Subjects"]))
 to_lowercase() ensures that “Fiction” and “fiction” are treated as the same value.
 trim() removes any unnecessary spaces around the subject name.
 This standardization step prevents counting errors caused by wrong capitalization or spacing.
+
 **Check if Subject Is Usable**
 - Before counting, the algorithm checks if the subject value is not empty (IF subject ≠ "" THEN).
 - This prevents missing or blank subject fields from being added to the tally.
 - Only valid subject entries move on to the next step for counting.
+  
 **Count It**
 - The algorithm checks whether the subject already exists in the dictionary subjectTally:
 - If it does, its count is increased by 1.
 - If it does not, a new entry is created with an initial value of 1.
 - This logic ensures that every subject’s total occurrences are correctly tracked.
+  
 **Note Missing Subjects**
 - If the subject field was empty or invalid, the algorithm increases the missingSubjects counter by 1.
 - This allows the final report to include the number of incomplete records.
@@ -76,6 +81,7 @@ This standardization step prevents counting errors caused by wrong capitalizatio
 - The algorithm then loops through each subject in subjectTally:
 - If a subject’s count is higher than topCount, it updates topCount and topSubject.
 - At the end of this loop, topSubject contains the most frequent subject and topCount its frequency.
+  
 **Display the Results**
 - The algorithm prints a formatted summary report showing:
 - Each subject and its count.
