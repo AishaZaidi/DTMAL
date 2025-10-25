@@ -39,7 +39,11 @@ It is used under fair use for analysis, visualization, and algorithmic explorati
 ## Step 3: Design Your Algorithm 
 ##### Contributors:(Lilian Omolo,Syeda Aisha Zaidi)
 
-- Designing the **`CountPopularSubjects`** algorithm to analyze the dataset and identify the most frequent subject.  
+- Our goal was to designing the algorithm that can analyze the dataset and identify the most frequent subject.
+Identified variables included :
+--subjectTally → an empty dictionary that stores subjects as keys and their counts as values.
+--totalChecked → keeps track of the total number of records processed.
+--missingSubjects → counts how many records have empty or missing subject fields  
 - Writing **human-readable pseudocode** that meets the course requirements for iteration, selection, and variable use.  
 - Providing detailed explanations for each algorithm step in the README.  
 - Checking that the dataset’s `Subjects` column was suitable for analysis.  
