@@ -50,7 +50,7 @@
                                         <p>First, we load our CSV file and set up some containers:</p>
                                         <ul>
                                             <li><strong>subjectTally:</strong> Like a notebook where we keep count of each subject</li>
-                                            <li><strong>totalChecked:</strong> Counts how many books we've looked at</li>
+                                            <li><strong>totalChecked:</strong> Counts how many books we have looked at</li>
                                             <li><strong>missingSubjects:</strong> Tracks books without subject info</li>
                                         </ul>
                                         <p>Think of it like setting up your workspace before starting a project.</p>
@@ -69,8 +69,8 @@
                                         <p>We use a simple loop to check every single book record:</p>
                                         <ul>
                                             <li>Look at book #1, then book #2, then book #3...</li>
-                                            <li>Keep counting: "That's 1 book checked, that's 2 books checked..."</li>
-                                            <li>Make sure we don't skip any or count any twice</li>
+                                            <li>Keep counting: "That is 1 book checked, that is 2 books checked..."</li>
+                                            <li>Make sure we do not skip any or count any twice</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -106,8 +106,8 @@
                                         <p>Here's where the actual counting happens:</p>
                                         <ul>
                                             <li><strong>If the subject field is empty:</strong> Add 1 to our "missing subjects" count</li>
-                                            <li><strong>If we've seen this subject before:</strong> Add 1 to its count</li>
-                                            <li><strong>If it's a new subject:</strong> Start counting it at 1</li>
+                                            <li><strong>If we haveve seen this subject before:</strong> Add 1 to its count</li>
+                                            <li><strong>If it is a new subject:</strong> Start counting it at 1</li>
                                         </ul>
                                         <p>It's like having tally marks for each subject category.</p>
                                     </div>
@@ -127,7 +127,7 @@
                                             <li>Start with topCount = 0</li>
                                             <li>Go through each subject in our tally</li>
                                             <li>If a subject has more counts than our current winner, it becomes the new winner</li>
-                                            <li>Keep doing this until we've checked them all</li>
+                                            <li>Keep doing this until we have checked them all</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -180,8 +180,7 @@
                                 <p>We added extra filtering to skip:</p>
                                 <ul class="small">
                                     <li>Library classification codes</li>
-                                    <li>Very short entries (≤3 chars)</li>
-                                    <li>Random number/letter combos</li>
+                                    <li>Very short entries (<= 3 chars)</li>
                                 </ul>
                                 <p class="small">This makes our results much cleaner!</p>
                             </div>
@@ -196,7 +195,7 @@
                         <div class="alert" style="background-color: #E8F1E8; border-color: #8FA68E; color: #2d5a27;">
                             <h5><i class="bi bi-heart me-2"></i>Simple & Effective</h5>
                             <p class="mb-0">
-                                We chose frequency counting because it's straightforward and gives clear results. 
+                                We chose frequency counting because it is straightforward and gives clear results. 
                                 Everyone can understand "count how many times each subject appears."
                             </p>
                         </div>
@@ -225,8 +224,8 @@
                 
                 <h3 class="mt-4">What Our Code Actually Does</h3>
                 <p>
-                    We wrote this in Python because it's good at handling CSV files and text processing. 
-                    The main script is called <code>count_popular_subjects.py</code> - you can check it out 
+                    We wrote this in Python because it is good at handling CSV files and text processing. 
+                    The main script is called <code>count_popular_subjects.py</code> - you can check it out on our GitHub
                     to see exactly how we implemented everything.
                 </p>
                 
@@ -242,7 +241,9 @@
 
 Most popular: fiction (12x)
 Total records: 150
-Unique subjects: 45</pre>
+Unique subjects: 45
+Records Missing Subject: 4
+Done analyzing!</pre>
                     </div>
                 </div>
             </section>
