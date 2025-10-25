@@ -50,3 +50,87 @@ img.copyright_logo {
 .course-logo {
   width: 35vw;
 }
+
+/* Custom styles for the project website */
+
+/* Navigation styling */
+.navbar {
+  background-color: #6f42c1 !important;
+  margin-bottom: 2rem;
+}
+
+.navbar .nav-link {
+  color: white !important;
+  font-weight: bold;
+  font-size: 18px;
+  padding: 0.75rem 1.25rem !important;
+  margin: 0 0.25rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.navbar .nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.navbar .nav-link.active {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Team photo styling */
+.team-photo {
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px 8px 0 0;
+}
+
+/* Timeline and cards */
+.timeline .card {
+  border-left: 4px solid #fd7e14;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  article {
+    margin-left: 5vw;
+    margin-right: 5vw;
+  }
+  
+  h1 {
+    font-size: 36px;
+  }
+  
+  h2 {
+    font-size: 28px;
+  }
+  
+  .course-logo {
+    width: 80vw;
+  }
+  
+  .team-photo {
+    height: 200px;
+  }
+}
+
+/* Custom alert styling */
+.alert {
+  border-radius: 8px;
+  margin: 1rem 0;
+}
+
+/* Table styling */
+.table-responsive {
+  margin: 1rem 0;
+}
+
+/* Card improvements */
+.card {
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  margin-bottom: 1rem;
+}
+
+.card-header {
+  border-radius: 8px 8px 0 0 !important;
+}
