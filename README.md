@@ -45,7 +45,7 @@ It is used under fair use for analysis, visualization, and algorithmic explorati
 - Checking that the dataset’s `Subjects` column was suitable for analysis.  
 - Editing and organizing the project documentation in GitHub.
 
-This contribution demonstrates my understanding of algorithmic design, structured data processing, and technical documentation using Markdown.
+This contribution demonstrates our understanding of algorithmic design, structured data processing, and technical documentation using Markdown.
 
 
 ## Step 4: Website 
