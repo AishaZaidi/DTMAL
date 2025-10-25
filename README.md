@@ -1,5 +1,5 @@
 # Algorithm design
-## Step 1: Conceptualization
+## Step 1: Conceptualization (Muhammad Al-Waeli,Lilian Omolo,Stefan Ionica,Syeda Aisha Zaidi)
 This dataset is part of our Assignment 2: Algorithm Design (Project Work) for the Datalogical thinking course. It is a curated metadata collection derived from open source digital book https://www.kaggle.com/datasets/lokeshparab/gutenberg-books-and-metadata-2025.
 ### Team Members & Roles
 | Name | Role | Contribution |
