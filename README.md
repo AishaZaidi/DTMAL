@@ -4,7 +4,7 @@ This dataset is part of our Assignment 2: Algorithm Design (Project Work) for th
 ### Team Members & Roles
 | Name | Role | Contribution |
 | Muhammad Al-Waeli | Data Research Lead | Dataset selection and initial setup |
-| Syeda Aisha Zaidi| Problem & Algorithm Lead | Designed problem logic and algorithm |
+| Syeda Aisha Zaidi| | Problem & Algorithm Lead | Designed problem logic and algorithm |
 | Lilian Omolo | Data Engineer | Cleaned and validated dataset || Designed problem logic and algorithm |
 | Stefan Ionica| Documentation Lead | Website setup and documentation || Python code |
 ## Step 2: Curation of our Dataset
