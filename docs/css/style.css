@@ -84,6 +84,13 @@ img.copyright_logo {
   border-radius: 8px 8px 0 0;
 }
 
+/* Specific styling for Lilo's photo to show more of the image */
+img[src="img/LIlo.jpg"] {
+  object-fit: contain;
+  object-position: center;
+  background-color: #f8f9fa;
+}
+
 /* Timeline and cards */
 .timeline .card {
   border-left: 4px solid #7A8A99;
