@@ -1,7 +1,7 @@
 # Algorithm design
 ## Step 1: Conceptualization
 This dataset is part of our Assignment 2: Algorithm Design (Project Work) for the Datalogical thinking course. It is a curated metadata collection derived from open source digital book https://www.kaggle.com/datasets/lokeshparab/gutenberg-books-and-metadata-2025.
-###Team Members & Roles
+### Team Members & Roles
 | Name | Role | Contribution |
 | Muhammad Al-Waeli | Data Research Lead | Dataset selection and initial setup |
 | Syeda Aisha Zaidi| Problem & Algorithm Lead | Designed problem logic and algorithm |
@@ -27,8 +27,8 @@ License & Usage:
 This dataset is intended for educational purposes only within the context of the Assignment 2 group project.
 It is used under fair use for analysis, visualization, and algorithmic exploration.
 
-##Step 3: Design Your Algorithm
+## Step 3: Design Your Algorithm
 
-##Step 4: Website
+## Step 4: Website
 
 
