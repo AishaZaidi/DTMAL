@@ -40,5 +40,9 @@ Figure out which subject shows up the most in the library records.
 
 
 ## Step 4: Website
-
-
+The website was created following the steps below:  
+- **Skeleton** creation.  
+- Insertion of the body **content**  
+- Building the general **structure**.
+- **Attributes** team member information was included  
+- Testing of final website to ensure interactivity
