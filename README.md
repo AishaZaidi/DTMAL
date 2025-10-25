@@ -34,9 +34,7 @@ This dataset will be used to design and test an algorithmic model that processes
 This dataset is intended for educational purposes only within the context of the Assignment 2 group project.
 It is used under fair use for analysis, visualization, and algorithmic exploration.
 
-## Step 3: Design Your Algorithm
-I contributed primarily to the **algorithm design and documentation** stages of the project.  
-My key tasks included:
+## Step 3: Design Your Algorithm (Syeda Aisha Zaidi)
 
 - Designing the **`CountPopularSubjects`** algorithm to analyze the dataset and identify the most frequent subject.  
 - Writing **human-readable pseudocode** that meets the course requirements for iteration, selection, and variable use.  
