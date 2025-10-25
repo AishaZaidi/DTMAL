@@ -35,6 +35,9 @@ This dataset is intended for educational purposes only within the context of the
 It is used under fair use for analysis, visualization, and algorithmic exploration.
 
 ## Step 3: Design Your Algorithm
+**###Goal###**
+Figure out which subject shows up the most in the library records.
+
 
 ## Step 4: Website
 
